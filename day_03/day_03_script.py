@@ -5,10 +5,12 @@ import math
 
 def count_trees(arr, steps_right, steps_down):
     n_rows, n_cols = arr.shape    
-    n_rows = math.floor(n_rows / steps_down)
-    across_positions = [(steps_right * n)  % n_cols for n in range(n_rows)]
+    n_down_steps = math.floor(n_rows / steps_down)
+    across_positions = [(steps_right * n)  % n_cols 
+                        for n in range(n_down_steps)]
     flat_array_positions = [
-        (rownum * n_cols * steps_down) + across_positions[rownum] for rownum in range(n_rows)]
+        (rownum * n_cols * steps_down) + across_positions[rownum] 
+        for rownum in range(n_down_steps)]
     total_trees = arr.ravel()[flat_array_positions].sum()
     return total_trees
 
