@@ -41,9 +41,7 @@ class RuleParser():
 
     def n_in_children(self, outer_bag):
         return self._n_in_subtree(outer_bag)-1
-    
-
-
+  
 
 parser = RuleParser()
 

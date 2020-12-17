@@ -5,5 +5,6 @@ all_seats = [int(
 
 print(f"Part 1: Highest seat is {max(all_seats)}")
 
-your_seat = [s for s in range(min(all_seats), max(all_seats)) if s not in all_seats][0]
+your_seat = [s for s in range(min(all_seats), max(all_seats)) 
+            if s not in all_seats][0]
 print(f"Part 2: Your seat is {your_seat}")

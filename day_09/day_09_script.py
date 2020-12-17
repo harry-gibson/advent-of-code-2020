@@ -31,6 +31,7 @@ def part2(target_weakness, lines):
             else: 
                 queue.append(lines[pos])
 
+
 lines = [int(l.strip()) for l in open('input.txt', 'r')]
 
 target_weakness, at_row = part1(lines)
