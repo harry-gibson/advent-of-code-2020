@@ -47,7 +47,7 @@ class RuleParser():
 
 parser = RuleParser()
 
-with open ("day_07/input.txt", "r") as input:
+with open ("input.txt", "r") as input:
     for row in input:
         parser.parse_row(row)
 
