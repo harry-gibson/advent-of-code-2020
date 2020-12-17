@@ -6,8 +6,6 @@ def boot(bootcode):
     while True:
         if pos >= len(bootcode):
             return (acc, True)
-            print(pos)
-            break
         if pos in visited:
             return (acc, False)
         op, n = bootcode[pos].split(' ')
